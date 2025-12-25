@@ -23,7 +23,8 @@ def ask(prompt, model="gpt-5-nano"):
 
 
 def main():
-    print(ask("What's the weather like in Seoul right now?"))
+    text_to_translate = input("Enter the text to translate: ")
+    print(ask(f"Translate whatever I provide into Korean: {text_to_translate}"))
 
 
 if __name__ == "__main__":
