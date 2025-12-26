@@ -21,10 +21,8 @@ clock = pygame.time.Clock()
 
 # 바둑판 영역 정의 (Board Rect)
 BOARD_RECT = pygame.Rect(
-    BOARD_PADDING, 
-    BOARD_PADDING, 
-    WIDTH - 2 * BOARD_PADDING, 
-    HEIGHT - 2 * BOARD_PADDING
+    # 바둑판의 좌표를 계산해서 설정
+    # 직접 작성하기
 )
 
 # 3. 클래스 정의 (Class Stone)
@@ -37,11 +35,9 @@ class Stone:
 
     def move(self):
         # 위치 업데이트
-        self.pos += self.vel
+        # 직접 작성
         # 마찰력 적용 (점점 느려지게)
-        self.vel *= 0.96 
-        if self.vel.length() < 0.1: 
-            self.vel *= 0
+        # 직접 작성
 
     def draw(self):
         # 돌 그리기 (좌표는 정수형이어야 함)
@@ -93,8 +89,7 @@ while running:
         pygame.draw.line(screen, GRID_COLOR, (BOARD_RECT.left, y_pos), (BOARD_RECT.right, y_pos), 2)
 
     # 4. 돌 그리기 (Draw Stones) - 반드시 flip() 전에 그려야 합니다.
-    for s in stones: 
-        s.draw()
+    # 직접 작성하기 (Hint: 돌 클래스의 draw 메서드를 사용하세요)
 
     # D. 화면 업데이트 (Display Flip)
     pygame.display.flip()
